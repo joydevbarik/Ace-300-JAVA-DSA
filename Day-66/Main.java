@@ -5,8 +5,6 @@ public class Main {
 
     public static boolean isValidSudoku(char[][] board) {
 
-
-        // Check rows
         for(int r = 0; r < 9; r++) {
 
             HashSet<Character> set = new HashSet<>();
@@ -24,10 +22,6 @@ public class Main {
                 set.add(ch);
             }
         }
-
-
-
-        // Check columns
         for(int c = 0; c < 9; c++) {
 
             HashSet<Character> set = new HashSet<>();
@@ -45,11 +39,6 @@ public class Main {
                 set.add(ch);
             }
         }
-
-
-
-
-        // Check 3x3 boxes
         for(int row = 0; row < 9; row += 3) {
 
             for(int col = 0; col < 9; col += 3) {
